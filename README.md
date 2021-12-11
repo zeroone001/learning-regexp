@@ -40,3 +40,11 @@ let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // 修改这一行
 let replaceText = "$3 $2 $1"; // 修改这一行
 let result = str.replace(fixRegex, replaceText);
 ```
+
+## 删除开头和结尾的空白
+
+```js
+let hello = "   Hello, World!  ";
+let wsRegex = /^(\s*)|(\s*)$/g; // 修改这一行
+let result = hello.replace(wsRegex, ''); // 修改这一行
+```
