@@ -15,3 +15,28 @@ let myRegex = /<.*?>/; // 修改这一行 加上? 就会匹配最少的情况
 let result = text.match(myRegex); // 匹配 <h1>
 
 ```
+
+## 检查全部或无
+
+```js
+let favWord = "favorite";
+let favRegex = /favou?rite/; // 修改这一行
+let result = favRegex.test(favWord);
+```
+
+## 正向先行断言和负向先行断言
+
+```js
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // 修改这一行
+let result = pwRegex.test(sampleWord);
+```
+
+## 使用捕获组搜索和替换
+
+```js
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // 修改这一行
+let replaceText = "$3 $2 $1"; // 修改这一行
+let result = str.replace(fixRegex, replaceText);
+```
